@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NEON_GHOST — Cybersecurity Engineer Resume">
+  <title>NEON_GHOST // RESUME</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <canvas id="matrix" aria-hidden="true"></canvas>
+  <div class="scanlines" aria-hidden="true"></div>
+
+  <div class="terminal">
+    <header class="terminal-header">
+      <div class="window-controls">
+        <span class="dot red"></span>
+        <span class="dot yellow"></span>
+        <span class="dot green"></span>
+      </div>
+      <span class="window-title">ghost@darknet:~$ cat resume.txt</span>
+      <span class="status" id="clock">--:--:--</span>
+    </header>
+
+    <main class="terminal-body">
+      <pre class="ascii-art" aria-hidden="true">
+ ███╗   ██╗███████╗ ██████╗ ███╗   ██╗     ██████╗ ██╗  ██╗ ██████╗ ███████╗████████╗
+ ████╗  ██║██╔════╝██╔═══██╗████╗  ██║    ██╔════╝ ██║  ██║██╔═══██╗██╔════╝╚══██╔══╝
+ ██╔██╗ ██║█████╗  ██║   ██║██╔██╗ ██║    ██║  ███╗███████║██║   ██║███████╗   ██║
+ ██║╚██╗██║██╔══╝  ██║   ██║██║╚██╗██║    ██║   ██║██╔══██║██║   ██║╚════██║   ██║
+ ██║ ╚████║███████╗╚██████╔╝██║ ╚████║    ╚██████╔╝██║  ██║╚██████╔╝███████║   ██║
+ ╚═╝  ╚═══╝╚══════╝ ╚═════╝ ╚═╝  ╚═══╝     ╚═════╝ ╚═╝  ╚═╝ ╚═════╝ ╚══════╝   ╚═╝
+      </pre>
+
+      <section class="boot-sequence" id="boot-sequence" aria-live="polite"></section>
+
+      <article class="resume-content" id="resume-content" hidden>
+        <section class="block">
+          <h2><span class="prompt">&gt;</span> IDENTITY</h2>
+          <dl class="info-grid">
+            <dt>CODENAME</dt>
+            <dd>NEON_GHOST</dd>
+            <dt>REAL_NAME</dt>
+            <dd>林晓杰 / Alex Lin</dd>
+            <dt>LOCATION</dt>
+            <dd>127.0.0.1 (Shanghai, CN)</dd>
+            <dt>STATUS</dt>
+            <dd><span class="badge online">AVAILABLE_FOR_HIRE</span></dd>
+            <dt>CONTACT</dt>
+            <dd>
+              <a href="mailto:ghost@darknet.local">ghost@darknet.local</a>
+              <span class="sep">|</span>
+              <a href="https://github.com/LXJlab" target="_blank" rel="noopener">github.com/LXJlab</a>
+            </dd>
+          </dl>
+        </section>
+
+        <section class="block">
+          <h2><span class="prompt">&gt;</span> SUMMARY</h2>
+          <p class="typed-text" id="summary-text"></p>
+        </section>
+
+        <section class="block">
+          <h2><span class="prompt">&gt;</span> SKILLS</h2>
+          <ul class="skill-list">
+            <li><span class="skill-name">Penetration Testing</span><span class="skill-bar" data-level="92"></span></li>
+            <li><span class="skill-name">Reverse Engineering</span><span class="skill-bar" data-level="85"></span></li>
+            <li><span class="skill-name">Python / Rust / C</span><span class="skill-bar" data-level="88"></span></li>
+            <li><span class="skill-name">Network Security</span><span class="skill-bar" data-level="90"></span></li>
+            <li><span class="skill-name">Cloud Infra (AWS/K8s)</span><span class="skill-bar" data-level="78"></span></li>
+            <li><span class="skill-name">OSINT / Threat Intel</span><span class="skill-bar" data-level="82"></span></li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2><span class="prompt">&gt;</span> EXPERIENCE</h2>
+          <div class="timeline">
+            <article class="timeline-item">
+              <header>
+                <span class="date">2023 — PRESENT</span>
+                <h3>Senior Security Engineer @ Phantom Labs</h3>
+              </header>
+              <ul>
+                <li>Led red-team ops against Fortune 500 targets; avg. breach time reduced 40%</li>
+                <li>Built automated exploit framework in Rust (internal codename: <code>SHIV</code>)</li>
+                <li>Discovered 3 zero-days in enterprise VPN appliances (CVE pending)</li>
+              </ul>
+            </article>
+            <article class="timeline-item">
+              <header>
+                <span class="date">2020 — 2023</span>
+                <h3>Offensive Security Researcher @ ZeroDay Collective</h3>
+              </header>
+              <ul>
+                <li>Published 12 advisories on kernel-level privilege escalation bugs</li>
+                <li>Developed fuzzing pipeline that found 200+ memory corruption issues</li>
+                <li>Speaker at DEF CON 30 — "Breaking the Unbreakable Sandbox"</li>
+              </ul>
+            </article>
+            <article class="timeline-item">
+              <header>
+                <span class="date">2017 — 2020</span>
+                <h3>Security Analyst @ CyberShield Inc.</h3>
+              </header>
+              <ul>
+                <li>Managed SOC for 50+ enterprise clients across APAC region</li>
+                <li>Incident response lead for ransomware outbreaks (avg. recovery: 4.2h)</li>
+                <li>Created internal threat-hunting playbooks adopted company-wide</li>
+              </ul>
+            </article>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2><span class="prompt">&gt;</span> PROJECTS</h2>
+          <div class="project-grid">
+            <article class="project-card">
+              <h3>darkflow</h3>
+              <p>Real-time network traffic analyzer with ML-based anomaly detection. 2.4k stars on GitHub.</p>
+              <span class="tag">Python</span><span class="tag">TensorFlow</span>
+            </article>
+            <article class="project-card">
+              <h3>shellbreak</h3>
+              <p>Post-exploitation toolkit for lateral movement in Active Directory environments.</p>
+              <span class="tag">Rust</span><span class="tag">Windows API</span>
+            </article>
+            <article class="project-card">
+              <h3>phantom-payload</h3>
+              <p>Polymorphic shellcode generator with anti-AV evasion techniques.</p>
+              <span class="tag">C</span><span class="tag">Assembly</span>
+            </article>
+          </div>
+        </section>
+
+        <section class="block">
+          <h2><span class="prompt">&gt;</span> CERTIFICATIONS</h2>
+          <ul class="cert-list">
+            <li><code>OSCP</code> — Offensive Security Certified Professional</li>
+            <li><code>OSCE3</code> — Offensive Security Certified Expert 3</li>
+            <li><code>GXPN</code> — GIAC Exploit Researcher and Advanced Penetration Tester</li>
+            <li><code>CISSP</code> — Certified Information Systems Security Professional</li>
+          </ul>
+        </section>
+
+        <section class="block">
+          <h2><span class="prompt">&gt;</span> EDUCATION</h2>
+          <p><strong>M.S. Cybersecurity</strong> — Shanghai Jiao Tong University (2015–2017)</p>
+          <p><strong>B.S. Computer Science</strong> — Fudan University (2011–2015)</p>
+        </section>
+
+        <footer class="terminal-footer">
+          <p><span class="prompt">$</span> echo "End of file." <span class="cursor-blink">█</span></p>
+          <p class="hint">Press <kbd>R</kbd> to reboot terminal · <kbd>G</kbd> for glitch mode</p>
+        </footer>
+      </article>
+    </main>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
